@@ -11,32 +11,22 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "reserva")
-public class Reserva implements Serializable {
-
+@Table(name = "passagem")
+public class Passagem implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
-    //FIXME como será o relacionamento com voo
+   //passageiros
+    //id reserva
+    //id pagamento
 
-
-    public Reserva() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    //data
 
     @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this);
     }
 }
-

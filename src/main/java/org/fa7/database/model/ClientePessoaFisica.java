@@ -7,9 +7,9 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "pessoa_fisica")
+@Table(name = "cliente_pessoa_fisica")
 @PrimaryKeyJoinColumn(name = "id_pessoa")
-public class PessoaFisica extends Pessoa {
+public class ClientePessoaFisica extends Pessoa {
 
     private static final long serialVersionUID = 6882115490287337078L;
 
@@ -21,7 +21,7 @@ public class PessoaFisica extends Pessoa {
     @Basic(optional = false)
     private String cpf;
 
-    public PessoaFisica() {
+    public ClientePessoaFisica() {
     }
 
     public String getCpf() {

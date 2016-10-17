@@ -7,9 +7,9 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "pessoa_juridica")
+@Table(name = "cliente_pessoa_juridica")
 @PrimaryKeyJoinColumn(name = "id_pessoa")
-public class PessoaJuridica extends Pessoa {
+public class ClientePessoaJuridica extends Pessoa {
 
     private static final long serialVersionUID = 2927220865699701235L;
 
@@ -21,7 +21,7 @@ public class PessoaJuridica extends Pessoa {
     @Basic(optional = false)
     private String cnpj;
 
-    public PessoaJuridica() {
+    public ClientePessoaJuridica() {
     }
 
     public String getCnpj() {

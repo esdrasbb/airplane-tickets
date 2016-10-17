@@ -1,6 +1,6 @@
 package org.fa7.service;
 
-import org.fa7.database.ReservaRepository;
+import org.fa7.database.repository.ReservaRepository;
 import org.fa7.database.model.Reserva;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
