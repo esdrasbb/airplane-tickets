@@ -16,7 +16,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "aeroporto")
-public class Aeroporto implements Serializable{
+public class Aeroporto implements Serializable {
 
     private static final long serialVersionUID = -6678427990001459270L;
 
@@ -29,8 +29,8 @@ public class Aeroporto implements Serializable{
     @Basic(optional = false)
     private String nome;
 
-    @ManyToOne(fetch= FetchType.EAGER)
-    @JoinColumn(name="id_cidade",nullable = false)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_cidade", nullable = false)
     private Cidade cidade;
 
     public Aeroporto() {
