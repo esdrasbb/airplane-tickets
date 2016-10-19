@@ -1,7 +1,5 @@
-INSERT INTO tipo_pagamento ( descricao) VALUES
---data_registro, ativo,
---NOW(), 'true',
-('Dinheiro'),
-('Cheque'),
-('Cartão Visa'),
-('Cartão Mastercard');
+INSERT INTO tipo_pagamento ( descricao, data_registro, esta_ativo) VALUES
+('Dinheiro', NOW(), true),
+('Cheque', NOW(), true),
+('Cartão Visa', NOW(), true),
+('Cartão Mastercard', NOW(), true);
