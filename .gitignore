@@ -23,3 +23,16 @@ dependency-reduced-pom.xml
 README.html
 
 logs
+
+.settings/
+.loadpath
+.recommenders
+
+# Eclipse Core
+.project
+
+*target*
+*.jar
+*.war
+*.ear
+*.class
