@@ -19,7 +19,7 @@ public class Passagem implements Serializable {
     @Column(name = "id")
     private Integer id;
 
-   //passageiros
+    //passageiros
     //id reserva
     //id pagamento
 

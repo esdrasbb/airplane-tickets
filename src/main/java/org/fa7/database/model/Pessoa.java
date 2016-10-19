@@ -1,4 +1,3 @@
-
 package org.fa7.database.model;
 
 
@@ -36,7 +35,7 @@ public abstract class Pessoa implements Serializable {
 
     @Basic(optional = true)
     @Column(name = "telefone")
-    protected  String telefone;
+    protected String telefone;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "data_registro")

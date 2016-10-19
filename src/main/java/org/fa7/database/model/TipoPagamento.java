@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "tipo_pagamento")
-public class TipoPagamento implements Serializable{
+public class TipoPagamento implements Serializable {
 
     private static final long serialVersionUID = -8484901536236342916L;
 
