@@ -1,6 +1,6 @@
 package org.fa7.database.model;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,14 +8,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @Entity
 @Table(name = "reserva")
 public class Reserva implements Serializable {
 
-
-    @Id
+	private static final long serialVersionUID = 1L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;

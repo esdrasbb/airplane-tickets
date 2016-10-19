@@ -1,7 +1,7 @@
 package org.fa7.service;
 
-import org.fa7.database.repository.ReservaRepository;
 import org.fa7.database.model.Reserva;
+import org.fa7.database.repository.ReservaRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +15,23 @@ public class ReservaService {
 
     @Autowired
     private ReservaRepository reservaRepository;
+    
+    public void salvar(Reserva reserva){
+    	reservaRepository.save(reserva);
+	}
+	
+	public  Iterable<Reserva> listar(){
+		return reservaRepository.findAll();
+	}
+	
+	public Reserva buscar(Integer id){
+		return reservaRepository.findOne(id);
+	}
+	
+	public void remover(Integer id){
+		Reserva reserva = this.buscar(id);
+		if(reserva != null) reservaRepository.delete(reserva);
+}
 
     //only for test
     public void validate() {
