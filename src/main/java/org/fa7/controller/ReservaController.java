@@ -4,7 +4,7 @@ package org.fa7.controller;
 import javax.validation.Valid;
 
 import org.fa7.database.model.Reserva;
-import org.fa7.excessoes.ReservaException;
+import org.fa7.exception.ReservaException;
 import org.fa7.service.ReservaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

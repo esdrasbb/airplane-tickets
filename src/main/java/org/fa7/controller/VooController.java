@@ -6,9 +6,9 @@ import javax.validation.Valid;
 import org.fa7.database.model.Aeroporto;
 import org.fa7.database.model.EmpresaAerea;
 import org.fa7.database.model.Voo;
-import org.fa7.excessoes.VooException;
-import org.fa7.propertyEditors.AeroportoPropertyEditors;
-import org.fa7.propertyEditors.EmpresaAereaPropertyEditors;
+import org.fa7.exception.VooException;
+import org.fa7.propertyEditor.AeroportoPropertyEditor;
+import org.fa7.propertyEditor.EmpresaAereaPropertyEditor;
 import org.fa7.service.AeroportoService;
 import org.fa7.service.EmpresaAereaService;
 import org.fa7.service.VooService;
@@ -37,9 +37,9 @@ public class VooController {
 	@Autowired
 	private EmpresaAereaService empresaAereaService;
 	@Autowired
-	private AeroportoPropertyEditors aeroportoPropertyEditors;
+	private AeroportoPropertyEditor aeroportoPropertyEditors;
 	@Autowired
-	private EmpresaAereaPropertyEditors empresaAereaPropertyEditors;
+	private EmpresaAereaPropertyEditor empresaAereaPropertyEditors;
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public String listarVoos(Model model){

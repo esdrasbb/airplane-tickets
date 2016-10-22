@@ -26,14 +26,14 @@ public class Voo extends BaseModel {
     private String numero;
 
     @Temporal(TemporalType.TIME)
-    @Column(name = "horario_previsto_saida")
+    @Column(name = "data_hora_previsto_saida")
     @Basic(optional = false)
-    private Date horarioPrevistoSaida;
+    private Date dataHoraPrevistoSaida;
 
     @Temporal(TemporalType.TIME)
-    @Column(name = "horario_previsto_chegada")
+    @Column(name = "data_hora_previsto_chegada")
     @Basic(optional = false)
-    private Date horarioPrevistoChegada;
+    private Date dataHoraPrevistoChegada;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_aeroporto_saida", nullable = false)
@@ -51,9 +51,9 @@ public class Voo extends BaseModel {
     @JoinColumn(name = "id_empresa_aerea", nullable = false)
     private EmpresaAerea empresaAerea;
 
-    //FIXME adicionar assentos?
-    //FIXME data voo?
-
+    @Column(name = "quantidade_assentos_disponiveis")
+    @Basic(optional = false)
+    private Integer quantidadeAssentosDisponiveis;
 
     public Voo() {
     }
@@ -72,22 +72,6 @@ public class Voo extends BaseModel {
 
     public void setNumero(String numero) {
         this.numero = numero;
-    }
-
-    public Date getHorarioPrevistoSaida() {
-        return horarioPrevistoSaida;
-    }
-
-    public void setHorarioPrevistoSaida(Date horarioPrevistoSaida) {
-        this.horarioPrevistoSaida = horarioPrevistoSaida;
-    }
-
-    public Date getHorarioPrevistoChegada() {
-        return horarioPrevistoChegada;
-    }
-
-    public void setHorarioPrevistoChegada(Date horarioPrevistoChegada) {
-        this.horarioPrevistoChegada = horarioPrevistoChegada;
     }
 
     public Aeroporto getAeroportoSaida() {
@@ -122,4 +106,27 @@ public class Voo extends BaseModel {
         this.empresaAerea = empresaAerea;
     }
 
+    public Date getDataHoraPrevistoSaida() {
+        return dataHoraPrevistoSaida;
+    }
+
+    public void setDataHoraPrevistoSaida(Date dataHoraPrevistoSaida) {
+        this.dataHoraPrevistoSaida = dataHoraPrevistoSaida;
+    }
+
+    public Date getDataHoraPrevistoChegada() {
+        return dataHoraPrevistoChegada;
+    }
+
+    public void setDataHoraPrevistoChegada(Date dataHoraPrevistoChegada) {
+        this.dataHoraPrevistoChegada = dataHoraPrevistoChegada;
+    }
+
+    public Integer getQuantidadeAssentosDisponiveis() {
+        return quantidadeAssentosDisponiveis;
+    }
+
+    public void setQuantidadeAssentosDisponiveis(Integer quantidadeAssentosDisponiveis) {
+        this.quantidadeAssentosDisponiveis = quantidadeAssentosDisponiveis;
+    }
 }

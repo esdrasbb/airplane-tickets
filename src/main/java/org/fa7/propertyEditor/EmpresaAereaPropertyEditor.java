@@ -1,4 +1,4 @@
-package org.fa7.propertyEditors;
+package org.fa7.propertyEditor;
 
 import java.beans.PropertyEditorSupport;
 
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EmpresaAereaPropertyEditors extends PropertyEditorSupport{
+public class EmpresaAereaPropertyEditor extends PropertyEditorSupport{
 	
 	@Autowired
 	private EmpresaAereaRepository empresaAereaRepositorios;

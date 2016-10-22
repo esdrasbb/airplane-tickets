@@ -1,4 +1,4 @@
-package org.fa7.excessoes;
+package org.fa7.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
